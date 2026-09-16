@@ -1,0 +1,13 @@
+name: PatternLens Guardian Gate
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  gate:
+    uses: SILENCE-OBJECTS/patternlens/.github/workflows/reusable-agent-gate.yml@__PINNED_SHA__
+    with:
+      repo_role: legal
+      release_mode: false
