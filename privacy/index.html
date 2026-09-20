@@ -7,7 +7,7 @@
   <style>
     :root { color-scheme: dark; }
     body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      background: #121212; color: #e8e6e3; line-height: 1.55; }
+      background: #121417; color: #e8e6e3; line-height: 1.55; }
     main { max-width: 42rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
     h1 { font-weight: 560; letter-spacing: 0.01em; font-size: 1.65rem; color: #f3f1ee; }
     h2 { font-size: 1.05rem; margin-top: 2rem; color: #c9a84c; font-weight: 550; }
@@ -18,13 +18,41 @@
     th, td { border-bottom: 1px solid #2a2a2a; text-align: left; padding: 0.55rem 0.4rem; vertical-align: top; }
     th { color: #b0aaa2; font-weight: 550; }
     .note { border-left: 2px solid #c9a84c; padding-left: 0.85rem; color: #a8a49c; }
+    #opt-out { scroll-margin-top: 1.5rem; }
   </style>
 </head>
 <body>
 <main>
   <h1>Privacy Policy — PatternLens</h1>
-  <p class="meta">Last updated: 11 September 2026 · Service: PatternLens (patternlens.app) · SILENCE.OBJECTS · Soft Noire</p>
+  <p class="meta">Last updated: 20 September 2026 · Service: PatternLens (patternlens.app) · SILENCE.OBJECTS · Soft Noire · OD-004</p>
   <p class="note">Controller: Global X Solutions Sp. z o.o. (KRS 0000646869, NIP 4960249870), Zakrze 79, 08-200 Zakrze, Poland. Contact: <a href="mailto:ewa.tchorzewska@globalx.pl">ewa.tchorzewska@globalx.pl</a>. Apple Developer membership is Individual; service controller is the company named above.</p>
+
+  <h2>0. Arrival measurement (OD-004)</h2>
+  <p>From the first moment you open PatternLens on the web or in the app, we may process <strong>structural interaction signals</strong> so the product can work. We disclose this on the first screen with a <strong>passive notice</strong> and an opt-out. We do <strong>not</strong> diagnose, treat, or score your health. Soft-Noir uses a <strong>disclosure</strong> gate — not hidden measurement.</p>
+  <table>
+    <thead><tr><th>Tier</th><th>What</th><th>Default</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><strong>T0</strong></td><td>Coarse technical / session bootstrap (app version, OS class, geo-switch US/EU, notice shown)</td><td>ON with notice</td><td>Needed for security + disclosure</td></tr>
+      <tr><td><strong>T1</strong></td><td>Structural interaction events (e.g. enter/skip arrival, PulseTap timing intervals, stillness as rhythm structure — not HRV/ANS)</td><td>US web: ON from t=0 with notice + opt-out; EU web: in-memory until opt-in at Enter; iOS: on-device buffer until opt-in</td><td>Never a clinical label</td></tr>
+      <tr><td><strong>T2</strong></td><td>Optional research / derived releases beyond core product</td><td><strong>OFF</strong> unless explicit opt-in</td><td>Never default</td></tr>
+    </tbody>
+  </table>
+  <p>Raw sensor streams and person-level dumps are <strong>not</strong> stored in git. Research raw (if any) lives only in the data plane and an Owner private replica. Agents never access raw.</p>
+
+  <h2 id="opt-out">Opt-out · GPC · Do Not Sell/Share</h2>
+  <p><strong>Opt-out:</strong> use the in-product control, or go to this section (<a href="#opt-out">/privacy#opt-out</a>). One control stops non-essential T1/T2 processing where applicable.</p>
+  <p><strong>GPC / DNT:</strong> where required, we treat Global Privacy Control (and documented Do-Not-Sell signals we support) as opt-out of sale/share of personal information and of non-essential T1/T2 where applicable.</p>
+  <p><strong>Do Not Sell/Share:</strong> we do not sell personal data for cross-context advertising. Request path: email <a href="mailto:ewa.tchorzewska@globalx.pl">ewa.tchorzewska@globalx.pl</a> with subject <code>DNS</code>.</p>
+
+  <h2>Geo summary</h2>
+  <table>
+    <thead><tr><th>Surface</th><th>Capture rule</th></tr></thead>
+    <tbody>
+      <tr><td>US web</td><td>T0/T1 from t=0 + notice; opt-out + GPC</td></tr>
+      <tr><td>EU web</td><td>In-memory to Enter opt-in; no consent → purge/sterile</td></tr>
+      <tr><td>iOS</td><td>On-device buffer; release after opt-in; decline → purge</td></tr>
+    </tbody>
+  </table>
 
   <h2>1. What PatternLens is</h2>
   <p>PatternLens is a privacy-first observation app. It helps you capture situations as “Objects” and view structural descriptions of rhythms and patterns. It does <strong>not</strong> diagnose, treat, coach, or provide medical or therapeutic advice.</p>
@@ -35,44 +63,48 @@
     <tbody>
       <tr><td>Account</td><td>Email, user ID (e.g. Sign in with Apple)</td><td>Create and secure your account</td></tr>
       <tr><td>App content</td><td>Objects, notes, session metadata you enter</td><td>Core observation features</td></tr>
-      <tr><td>Purchases</td><td>StoreKit transaction IDs, subscription status</td><td>In-app purchases / restore</td></tr>
-      <tr><td>Diagnostics</td><td>Crash / performance logs (if enabled)</td><td>Reliability</td></tr>
+      <tr><td>Arrival / structural (T0/T1)</td><td>See section 0</td><td>Product function + disclosure</td></tr>
+      <tr><td>Purchases</td><td>StoreKit transaction IDs, subscription status</td><td>In-app purchases / restore (when enabled)</td></tr>
+      <tr><td>Diagnostics</td><td>Crash / performance logs (if enabled)</td><td>Reliability — not behavioral structure tiers</td></tr>
       <tr><td>Technical</td><td>App version, OS version, coarse device type</td><td>Compatibility and security</td></tr>
     </tbody>
   </table>
-  <p>We do not collect HealthKit data. We do not sell personal data. We do not use your data for cross-app advertising tracking.</p>
+  <p>We do not collect HealthKit data. We do not sell personal data. We do not use your data for cross-app advertising tracking. We do not use Stripe on PatternLens surfaces.</p>
 
   <h2>3. How we use data</h2>
   <ul>
     <li>Provide, maintain, and secure PatternLens</li>
-    <li>Process purchases via Apple</li>
+    <li>Process purchases via Apple (when IAP is live)</li>
     <li>Respond to support requests</li>
     <li>Meet legal obligations</li>
   </ul>
   <p>Optional AI-assisted features (if enabled) require clear consent and only process content you choose to send.</p>
 
-  <h2>4. Legal bases (GDPR)</h2>
-  <p>Contract; legitimate interests (security and reliability); consent (optional AI / non-essential analytics); legal obligation where applicable.</p>
+  <h2>4. Optional incentive notice (iOS)</h2>
+  <p>If PatternLens offers a benefit for optional research/data release, the offer will show a <strong>financial-incentive notice</strong> before you opt in: what you get, what data leaves the device, how to decline without losing core product use, and how to withdraw. Decline = purge of buffered research release. Core PatternLens remains usable without that opt-in.</p>
 
-  <h2>5. Storage and processors</h2>
-  <p>Data may be processed in the EU and by infrastructure providers needed to run the service, including Apple for Sign in with Apple and StoreKit. Subprocessors will be listed here when the production stack is locked.</p>
+  <h2>5. Legal bases (GDPR)</h2>
+  <p>Contract; legitimate interests (security and reliability); consent (optional AI / T2 / non-essential processing); legal obligation where applicable.</p>
 
-  <h2>6. Retention</h2>
-  <p>Account and Objects until deletion or account closure; purchases as required for accounting/Apple records; diagnostics for a short period then deleted or aggregated.</p>
+  <h2>6. Storage and processors</h2>
+  <p>Data may be processed in the EU and by infrastructure providers needed to run the service, including Apple for Sign in with Apple and StoreKit. Subprocessors will be listed here when the production stack is locked. Raw research data (if any) is not kept in git.</p>
 
-  <h2>7. Your rights</h2>
+  <h2>7. Retention</h2>
+  <p>Account and Objects until deletion or account closure; purchases as required for accounting/Apple records; diagnostics for a short period then deleted or aggregated. Operational T0/T1 retention follows the product data contract (exact day counts published when Owner locks them — not invented here). T2 follows the research protocol when opted in.</p>
+
+  <h2>8. Your rights</h2>
   <p>Where GDPR (or similar laws) apply, you may request access, correction, deletion, restriction, portability, and objection, and withdraw consent. Email <a href="mailto:ewa.tchorzewska@globalx.pl">ewa.tchorzewska@globalx.pl</a>. You may complain to your supervisory authority (Poland: UODO).</p>
 
-  <h2>8. Children</h2>
+  <h2>9. Children</h2>
   <p>PatternLens is not directed at children under 13 (or a higher age where required). We do not knowingly collect children’s data.</p>
 
-  <h2>9. International transfers</h2>
+  <h2>10. International transfers</h2>
   <p>If data leaves the EEA, appropriate safeguards (such as SCCs) are used where required.</p>
 
-  <h2>10. Changes</h2>
+  <h2>11. Changes</h2>
   <p>We update this page and the “Last updated” date. Material changes may also be noticed in-app.</p>
 
-  <h2>11. Contact</h2>
+  <h2>12. Contact</h2>
   <p>Privacy: <a href="mailto:ewa.tchorzewska@globalx.pl">ewa.tchorzewska@globalx.pl</a><br />Web: <a href="https://patternlens.app">https://patternlens.app</a></p>
 </main>
 </body>
