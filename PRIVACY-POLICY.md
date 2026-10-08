@@ -1,10 +1,10 @@
 # Privacy Policy — PatternLens
-**Last updated:** 11 September 2026  
+**Last updated:** 8 October 2026  
 **Service:** PatternLens (`patternlens.app`) by SILENCE.OBJECTS  
-**Controller:** Global X Solutions Sp. z o.o. (KRS 0000646869, NIP 4960249870), Zakrze 79, 08-200 Zakrze, Poland  
-**Contact:** ewa.tchorzewska@globalx.pl  
+**Controller:** Ewa Tchorzewska, Poland (Apple Developer membership is Individual.)  
+**Contact:** privacy@patternlens.app  
 
-> Apple Developer account is Individual; privacy controller for the service is Global X Solutions Sp. z o.o. (Owner decision 2026-09-11).
+> Apple Developer account is Individual; privacy controller for the service is Ewa Tchorzewska.
 
 ---
 
@@ -54,7 +54,7 @@ Exact subprocessors will be listed here when production stack is locked (e.g. Su
 
 ## 7. Your rights
 
-If you are in the EEA/UK/Switzerland (and where similar laws apply), you may request access, correction, deletion, restriction, portability, and objection, and withdraw consent. Contact `ewa.tchorzewska@globalx.pl`. You may lodge a complaint with your local supervisory authority (in Poland: UODO).
+If you are in the EEA/UK/Switzerland (and where similar laws apply), you may request access, correction, deletion, restriction, portability, and objection, and withdraw consent. Contact `privacy@patternlens.app`. You may lodge a complaint with your local supervisory authority (in Poland: UODO).
 
 ## 8. Children
 
@@ -70,7 +70,7 @@ We will update this page and revise the “Last updated” date. Material change
 
 ## 11. Contact
 
-Privacy questions: **ewa.tchorzewska@globalx.pl**  
+Privacy questions: **privacy@patternlens.app**  
 Web: **https://patternlens.app**
 
 ---
